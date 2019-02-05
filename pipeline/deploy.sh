@@ -18,10 +18,10 @@ bx login --apikey ${DEPLOYER_API_KEY} -a https://api.${REGION_CODE}.bluemix.net 
 
 ./pipeline/create-action.sh save-feedback-entry-sequence prepare-entry-for-save,fa-functions-db/create-document --sequence --web true
 
-./pipeline/create-action.sh save-feedback-entry-sequence set-read-input,fa-functions-db/list-documents,format-entries --sequence --web true
+./pipeline/create-action.sh read-feedback-entry-sequence set-read-input,fa-functions-db/list-documents,format-entries --sequence --web true
 
 # create APIs
 
-bx fn api create /feedback /entries GET read-feedback-entries-sequence
+bx fn api create /feedback /entries GET read-feedback-entry-sequence
 
 bx fn api create /feedback /entries POST save-feedback-entry-sequence
