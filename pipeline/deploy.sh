@@ -31,6 +31,6 @@ bx fn service bind cloudantNoSQLDB ${CL_PACKAGE} --instance feedback-db-alias --
 ./pipeline/create-action.sh ${SEQ_WRITE} ${ACTION_PREFIX}set-read-input,${CL_PACKAGE}/list-documents,${ACTION_PREFIX}format-entries --sequence --web true
 
 # create APIs
-bx fn api create /${ACTION_PREFIX}feedback /entries GET ${SEQ_READ}
+bx fn api create /${ACTION_PREFIX}feedback /entries GET ${SEQ_READ} -n ${ACTION_PREFIX}feedback
 
-bx fn api create /${ACTION_PREFIX}feedback /entries POST ${SEQ_WRITE}
+bx fn api create /${ACTION_PREFIX}feedback /entries POST ${SEQ_WRITE} -n ${ACTION_PREFIX}feedback
