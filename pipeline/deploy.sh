@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash^
+#!/bin/bash#!/bin/bash
 set -x #echo on
 
 ACTION_PREFIX=27-
