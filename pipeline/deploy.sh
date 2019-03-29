@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x #echo on
 
-ACTION_PREFIX=XX-
+ACTION_PREFIX=27-
 CL_PACKAGE=lab-feedback-db-package
 SEQ_READ=${ACTION_PREFIX}save-feedback-entry-sequence
 SEQ_WRITE=${ACTION_PREFIX}read-feedback-entry-sequence
